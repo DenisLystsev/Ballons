@@ -4,8 +4,11 @@
 *
     box-sizing: border-box
 
+html
+    font-size: 62.5%
+
 body
-    padding: 50px
+    padding: 5rem
     background-color: #fff
     font-family: 'Roboto'
 
@@ -23,66 +26,104 @@ body
         left: 50%
         transform: translate(-50%, -50%)
     &__button
-        display: block
         margin: 0 auto
 
 .logo
     position: absolute
-    top: 50px
-    left: 50px
-    width: 56px
-    height: 70px
+    top: 5rem
+    left: 5rem
+    width: 5.6rem
+    height: 7rem
 
 .title
-    width: 970px
+    width: 97rem
     color: #fff
     text-align: center
-    margin-bottom: 50px
+    margin-bottom: 5rem
     &__first-part
         display: block
         text-transform: uppercase
         font-weight: 800
-        font-size: 50px
-        line-height: 60px
-        letter-spacing: 10px
-        margin-bottom: 10px
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        margin-bottom: 1rem
         animation-name: title__first-part
         animation-duration: 2s
+        backface-visibility: hidden
     &__second-part
         display: block
         font-weight: 300
-        font-size: 40px
-        line-height: 48px
-        letter-spacing: 5px
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: .5rem
         animation-name: title__second-part
         animation-duration: 2s
+        backface-visibility: hidden
 
 .button
-    width: 277px
-    height: 54px
-    color: #fff
-    border-radius: 50px
-    border: none
-    &__text
+    display: block
+    &:link, &:visited
+        position: relative
+        padding: 1.5rem 4rem
+        width: 27.7rem
+        height: 5.4rem
+        background-color: #fff
+        border-radius: 5rem
         text-transform: uppercase
+        text-decoration: none
         font-weight: 600
-        font-size: 20px
-        line-height: 24px
-        letter-spacing: 5px
+        font-size: 2rem
+        line-height: 2.4rem
+        letter-spacing: .5rem
         color: #777
+        transition: all .3s
+    &:hover
+        transform: translateY(-.4rem)
+        box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.1))
+        &::after
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.7)
+    &:active
+        transform: translateY(-.2rem)
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        display: block
+        width: 27.7rem
+        height: 5.4rem
+        border-radius: 5rem
+        z-index: -1
+        background-color: #fff
+        transition: all .4s
+    &_animated
+        animation-name: button
+        animation-duration: 2s
+        backface-visibility: hidden
+        animation-fill-mode: backwards
 
 @keyframes title__first-part
     0%
         opacity: 0
-        transform: translateX(-100px)
+        transform: translateX(-10rem)
     100%
         opacity: 1
-        transform: translateX(0px)
+        transform: translateX(0rem)
 
 @keyframes title__second-part
     0%
         opacity: 0
-        transform: translateX(100px)
+        transform: translateX(10rem)
     100%
         opacity: 1
-        transform: translateX(0px)
+        transform: translateX(0rem)
+
+@keyframes button
+    0%
+        opacity: 0
+        transform: translateY(7rem)
+    100%
+        opacity: 1
+        transform: translateY(0rem)
