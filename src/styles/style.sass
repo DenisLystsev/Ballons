@@ -34,12 +34,12 @@ body
     padding-top: 8rem
     margin: 0 auto
     &__title
-        font-size: 3.6rem
-        font-weight: 800
-        letter-spacing: 1rem
-        text-transform: uppercase
-        text-align: center
         margin-bottom: 8rem
+        transition: all .4s
+        backface-visibility: hidden
+        &:hover
+            transform: skew(15deg, 2deg) scale(1.1)
+            text-shadow: 0rem .4rem .4rem 0rem rgba(0, 0, 0, .25)            
 
 .logo
     position: absolute
@@ -48,7 +48,7 @@ body
     width: 5.6rem
     height: 7rem
 
-.title
+.title_h1
     width: 97rem
     color: #fff
     text-align: center
@@ -116,6 +116,17 @@ body
         animation-duration: 2s
         backface-visibility: hidden
         animation-fill-mode: backwards
+
+.title_h2
+    font-size: 3.6rem
+    font-weight: 800
+    letter-spacing: 1rem
+    text-transform: uppercase
+    text-align: center
+    &_gradientary
+        background: linear-gradient(90deg, #BA8554 0.03%, #A14F03 99.94%)
+        background-clip: text
+        color: transparent
 
 @keyframes title__first-part
     0%
