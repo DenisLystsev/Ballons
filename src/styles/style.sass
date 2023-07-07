@@ -18,7 +18,7 @@ body
 .header
     position: relative
     height: 95vh
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/Balloons.jpg") center / cover no-repeat
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, .7) 99.94%), url("../img/Balloons.jpg") center / cover no-repeat
     clip-path: polygon(0% 0%,100% 0, 100% 100%, 0 80%)
     &__wrapper
         position: absolute
@@ -39,10 +39,29 @@ body
         backface-visibility: hidden
         &:hover
             transform: skew(15deg, 2deg) scale(1.1)
-            text-shadow: 0rem .4rem .4rem 0rem rgba(0, 0, 0, .25)
+            text-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, .25)
     &__wrapper
         display: flex
         justify-content: space-between
+    &__left-container
+        width: 50%
+    &__description
+        margin-bottom: 4.5rem
+    &__right-container
+        position: relative
+        width: 50%
+    &__img
+        position: absolute
+        border-radius: .5rem
+        &_top
+            top: 0
+            left: 8.8rem
+        &_right
+            top: 9rem
+            left: 30.9rem
+        &_bottom
+            top: 16.4rem
+            left: 11rem
 
 .logo
     position: absolute
@@ -96,7 +115,7 @@ body
         transition: all .3s
     &:hover
         transform: translateY(-.4rem)
-        box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, 0.1))
+        box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, .1))
         &::after
             opacity: 0
             transform: scaleX(1.5) scaleY(1.7)
@@ -131,13 +150,28 @@ body
         background-clip: text
         color: transparent
 
+.description
+    &__title
+        color: #777
+        font-size: 2rem
+        font-weight: 700
+        letter-spacing: .2rem
+        margin-bottom: 1rem
+        text-transform: uppercase
+    &__text
+        color: #777
+        font-size: 1.6rem
+        font-weight: 400
+        line-height: 140%
+        letter-spacing: .2rem
+
 @keyframes title__first-part
     0%
         opacity: 0
         transform: translateX(-10rem)
     100%
         opacity: 1
-        transform: translateX(0rem)
+        transform: translateX(0)
 
 @keyframes title__second-part
     0%
@@ -145,7 +179,7 @@ body
         transform: translateX(10rem)
     100%
         opacity: 1
-        transform: translateX(0rem)
+        transform: translateX(0)
 
 @keyframes button
     0%
@@ -153,4 +187,4 @@ body
         transform: translateY(7rem)
     100%
         opacity: 1
-        transform: translateY(0rem)
+        transform: translateY(0)
