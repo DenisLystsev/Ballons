@@ -43,6 +43,7 @@ body
     &__wrapper
         display: flex
         justify-content: space-between
+        margin-bottom: 4.4rem
     &__left-container
         width: 50%
     &__description
@@ -53,6 +54,10 @@ body
     &__img
         position: absolute
         border-radius: .5rem
+        transition: all .5s
+        &:active
+            z-index: 10
+            transform: scale(1.6)
         &_top
             top: 0
             left: 8.8rem
@@ -164,6 +169,20 @@ body
         font-weight: 400
         line-height: 140%
         letter-spacing: .2rem
+
+.button-rectangle
+    width: 18rem
+    height: 4.5rem
+    border: none
+    background: none
+    border-bottom: 1px solid #BA8554
+    &:hover
+            background: #BA8554
+    &__text
+        font-size: 16px
+        font-weight: 700
+        letter-spacing: 2px
+        color: #777
 
 @keyframes title__first-part
     0%
