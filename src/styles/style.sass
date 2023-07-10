@@ -55,9 +55,11 @@ body
         position: absolute
         border-radius: .5rem
         transition: all .5s
-        &:active
+        outline-offset: .5rem
+        &:hover
             z-index: 10
-            transform: scale(1.6)
+            transform: scale(1.2)
+            outline: .3rem solid #BA8554
         &_top
             top: 0
             left: 8.8rem
@@ -67,6 +69,8 @@ body
         &_bottom
             top: 16.4rem
             left: 11rem
+    &:hover &__img:not(:hover)
+        transform: scale(.90)
 
 .logo
     position: absolute
@@ -171,18 +175,24 @@ body
         letter-spacing: .2rem
 
 .button-rectangle
-    width: 18rem
-    height: 4.5rem
+    display: inline-block
+    padding: 1rem
     border: none
     background: none
     border-bottom: 1px solid #BA8554
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: 2px
+    color: #777
+    text-decoration: none
+    transition: .5 all
     &:hover
-            background: #BA8554
-    &__text
-        font-size: 16px
-        font-weight: 700
-        letter-spacing: 2px
-        color: #777
+        background: #BA8554
+        color: #fff
+        box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, .1))
+        transform: translateY(-.2rem)
+    &:active
+        transform: translateY(0)
 
 @keyframes title__first-part
     0%
