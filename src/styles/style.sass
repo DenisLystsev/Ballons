@@ -82,11 +82,19 @@ body
     &__wrapper
         display: flex
         justify-content: space-between
+        max-width: 114rem
+        margin: 0 auto
 
 .third-section
     width: 114rem
     min-height: 78.2rem
     margin: 0 auto
+    &__title
+        margin-bottom: 8rem
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-bottom: 8rem
     &__button
         margin: 0 auto
 
@@ -127,7 +135,7 @@ body
     display: block
     &:link, &:visited
         position: relative
-        padding: 1.5rem 4rem
+        padding: 1.5rem 0rem
         width: 27.7rem
         height: 5.4rem
         background-color: #fff
@@ -140,6 +148,7 @@ body
         letter-spacing: .5rem
         color: #777
         transition: all .3s
+        text-align: center
     &:hover
         transform: translateY(-.4rem)
         box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, .1))
@@ -225,6 +234,16 @@ body
         transform: translateY(-1.5rem)
     &__icon
         margin-bottom: 2.4rem
+
+.card-s3
+    width: 34.1rem
+    min-height: 52rem
+    border-radius: .3rem
+    background: #fff
+    transition: .8s all
+    perspective: 150rem
+    &:hover
+        transform: rotateY(180deg)
 
 .text-align-center
     text-align: center
