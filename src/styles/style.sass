@@ -347,6 +347,11 @@ body
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
     &:last-child
         margin-bottom: 0
+    &:hover
+        // animation-name: card-s4__name
+        // animation-duration: 2s
+        // backface-visibility: hidden
+        // animation-fill-mode: backwards
     &__image-wrapper
         float: left
         width: 16.7rem
@@ -355,8 +360,21 @@ body
         shape-outside: circle(50% at 50% 50%)
         margin-right: 5.3rem
         overflow: hidden
+        position: relative
     &__img
         height: 100%
+    &__person-name
+        position: absolute
+        top: 50%
+        left: 50%
+        color: #fff
+        transform: translate(-50%, -20%)
+        opacity: 0
+        font-size: 2.4rem
+        font-weight: 400
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
     &__title
         color: #777
         font-size: 2rem
@@ -398,3 +416,10 @@ body
     100%
         opacity: 1
         transform: translateY(0)
+@keyframes card-s4__name
+    0%
+        opacity: 0
+        transform: translateY(-20%)
+    100%
+        opacity: 1
+        transform: translateY(-50%)
