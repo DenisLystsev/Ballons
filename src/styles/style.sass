@@ -13,6 +13,8 @@ body
     font-family: 'Roboto'
 
 .container
+    position: relative
+    z-index: 0
     background-color: #f7f7f7
 
 .header
@@ -98,6 +100,22 @@ body
     min-height: 106.1rem
     padding: 8rem 0
     position: relative
+    &__background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -2
+        object-fit: cover
+    &__bacground-gradient
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        background: linear-gradient(90deg, rgba(186, 133, 84, 0.60), rgba(0, 0, 0, 0.60))
     &__title
         color: #fff
         text-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, .25)
@@ -347,11 +365,12 @@ body
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
     &:last-child
         margin-bottom: 0
-    &:hover
-        // animation-name: card-s4__name
-        // animation-duration: 2s
-        // backface-visibility: hidden
-        // animation-fill-mode: backwards
+    &:hover &__person-name
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1)
+        filter: blur(.3rem) brightness(45%)
     &__image-wrapper
         float: left
         width: 16.7rem
@@ -363,6 +382,8 @@ body
         position: relative
     &__img
         height: 100%
+        transform: scale(1.2)
+        transition: .4s all
     &__person-name
         position: absolute
         top: 50%
@@ -375,6 +396,7 @@ body
         letter-spacing: .2rem
         text-transform: uppercase
         text-align: center
+        transition: .4s all
     &__title
         color: #777
         font-size: 2rem
@@ -416,10 +438,3 @@ body
     100%
         opacity: 1
         transform: translateY(0)
-@keyframes card-s4__name
-    0%
-        opacity: 0
-        transform: translateY(-20%)
-    100%
-        opacity: 1
-        transform: translateY(-50%)
