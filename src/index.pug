@@ -130,16 +130,21 @@ html(lang="ru")
                             .card-s4__text-wrapper
                                 h3.card-s4__title Это было великолепно и незабываемо
                                 .card-s4__text Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.
-                    a.third-section__button.button.button_animated(href="#") Забронировать
+                    a.fourth-section__button.button.button_animated(href="#") Забронировать
                 section.form-section
-                    .form-section__image
-                        .form-section__backround
-                            h2.form-section__title.title-h2.title-h2_gradientary.title-h2_short Забронировать тур
-                            form(action="").form-section__form.form
-                                .form__group
-                                    input.form__input(type="text" id="name" placeholder="Имя Фамилия" required)
-                                    lable.form__lable(for="name") Ваше имя и фамилия
-                                .form__group
-                                    input.form__input(type="email" id="email" placeholder="Ваш email" required)
-                                    lable.form__lable(for="email") Почтовый адрес
-                            a.form-section__button.button.button_animated.button_brown(href="#") Забронировать
+                        .form-section__image
+                            .form-section__backround
+                                h2.form-section__title.title-h2.title-h2_gradientary.title-h2_short Забронировать тур
+                                form(action="").form-section__form.form
+                                    .form__group
+                                        input.form__input(type="text" id="name" placeholder="Имя Фамилия" required)
+                                        label.form__label.form__label_input(for="name") Ваше имя и фамилия
+                                    .form__group
+                                        input.form__input(type="email" id="email" placeholder="Ваш email" required)
+                                        label.form__label.form__label_input(for="email") Почтовый адрес
+                                    .form__group-radio
+                                        input.form__radio(type="radio" id="groupTour" name="select-tour" checked)
+                                        label.form__label.form__label_radio(for="groupTour") <span class="form__button-radio"></span> Групповой тур
+                                        input.form__radio(type="radio" id="personalTour" name="select-tour")
+                                        label.form__label.form__label_radio(for="personalTour") <span class="form__button-radio"></span> Индивидуальный тур
+                                a.form-section__button.button.button_animated.button_brown(href="#") Забронировать

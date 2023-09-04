@@ -121,6 +121,8 @@ body
         text-shadow: 0 .4rem .4rem 0 rgba(0, 0, 0, .25)
     &__card-wrapper
         margin: 9.5rem 0
+    &__button
+        margin: 0 auto
 
 .logo
     position: absolute
@@ -426,11 +428,10 @@ body
     background: linear-gradient(90deg, #C3956A, #A14F03)
     padding: 10rem
     position: relative
-    padding: 10rem
     &__image
         background: url(../img/form-section__background.jpg) center / cover no-repeat
-        width: 114rem
-        height: 49.9rem
+        width: 87%
+        height: 71%
         position: absolute
         top: 50%
         left: 50%
@@ -439,24 +440,76 @@ body
         width: 100%
         height: 100%
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90))
-        clip-path: polygon(0 0, 63% 0, 50% 100%, 0 100%)
+        clip-path: polygon(0 0, 61% 0, 50% 100%, 0 100%)
         padding: 5rem
     &__title
         margin-bottom: 3rem
 
 .form
+    &__group
+        display: flex
+        flex-direction: column
     &__group:not(:last-child)
-        margin-bottom: 5rem
+        margin-bottom: 2.2rem
     &__input
-        width: 35.5rem
+        width: 33%
         font-size: 1.6rem
         font-weight: 400
         letter-spacing: .2rem
         padding: 1.8rem 0 1.8rem 2.2rem
         outline: none
         border: none
+        border-bottom: .2rem solid transparent
         border-radius: .3rem
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+        margin-bottom: 1.1rem
+        &:focus
+            border-bottom: .2rem solid #66D763
+        &:focus:invalid
+            border-bottom: .2rem solid #D76363
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+    &__label
+        position: relative
+        color: #777
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 2px
+        &_input
+            margin-left: 1.6rem
+            transition: .7s all
+        &_radio
+            cursor: pointer
+        &_radio:not(:last-child)
+            margin-right: 2.4rem
+    &__group-radio
+        margin-bottom: 3rem
+    &__radio
+        margin-right: .8rem
+    &__button-radio
+        position: absolute
+        top: -.7rem
+        left: 0
+        display: inline-block
+        width: 3rem
+        height: 3rem
+        border: .3rem solid #BA8554
+        border-radius: 50%
+        &::after
+            content: ""
+            display: block
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 50%
+            background: #BA8554
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+    &__radio:checked + &__label &__button-radio::after
+        opacity: 1
 
 .text-align-center
     text-align: center
