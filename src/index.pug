@@ -149,11 +149,11 @@ html(lang="ru")
                                         label.form__label.form__label_radio(for="personalTour") <span class="form__button-radio"></span> Индивидуальный тур
                                 a.form-section__button.button.button_brown(href="#") Забронировать
                 footer.footer
-                    img.footer__logo(src="img/logo.svg", alt="Логотип")
+                    a.footer__logo(href="#"): img.footer__img(src="img/logo.svg", alt="Логотип")
                     nav.footer__nav
                         ul.footer__menu.menu
-                            li.menu__item О нас
-                            li.menu__item Скидки
-                            li.menu__item Лучшие туры
-                            li.menu__item Калькулятор цен
-                            li.menu__item Связаться с нами
+                            li.menu__item: a.menu__link(href="#") О нас
+                            li.menu__item: a.menu__link(href="#") Скидки
+                            li.menu__item: a.menu__link(href="#") Лучшие туры
+                            li.menu__item: a.menu__link(href="#") Калькулятор цен
+                            li.menu__item: a.menu__link(href="#") Связаться с нами
