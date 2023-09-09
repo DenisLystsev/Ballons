@@ -1,0 +1,40 @@
+.first-section
+    max-width: 114rem
+    min-height: 71.2rem
+    padding-top: 8rem
+    margin: 0 auto
+    &__title
+        margin-bottom: 8rem
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-bottom: 4.4rem
+    &__left-container
+        width: 50%
+    &__description
+        margin-bottom: 4.5rem
+    &__right-container
+        position: relative
+        width: 50%
+    &__img
+        position: absolute
+        border-radius: .5rem
+        transition: all .5s
+        outline-offset: .5rem
+        &:hover
+            z-index: 10
+            transform: scale(1.2)
+            outline: .3rem solid #BA8554
+        &_top
+            top: 0
+            left: 8.8rem
+        &_right
+            top: 9rem
+            left: 30.9rem
+        &_bottom
+            top: 16.4rem
+            left: 11rem
+    &:hover &__img:not(:hover)
+        transform: scale(.90)
+    &__button
+        margin-bottom: 5.4rem

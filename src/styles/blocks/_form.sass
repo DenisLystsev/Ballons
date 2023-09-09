@@ -1,0 +1,66 @@
+.form
+    &__group
+        display: flex
+        flex-direction: column
+    &__group:not(:last-child)
+        margin-bottom: 2.2rem
+    &__input
+        width: 24%
+        font-size: 1.6rem
+        font-weight: 400
+        letter-spacing: .2rem
+        padding: 1.8rem 0 1.8rem 2.2rem
+        outline: none
+        border: none
+        border-bottom: .2rem solid transparent
+        border-radius: .3rem
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+        margin-bottom: 1.1rem
+        &:focus
+            border-bottom: .2rem solid #66D763
+        &:focus:invalid
+            border-bottom: .2rem solid #D76363
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+    &__label
+        position: relative
+        color: #777
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 2px
+        &_input
+            margin-left: 1.6rem
+            transition: .7s all
+        &_radio
+            cursor: pointer
+            margin-left: 4.2rem
+        &_radio:not(:last-child)
+            margin-right: 2.4rem
+    &__group-radio
+        margin-bottom: 4rem
+    &__radio
+        display: none
+    &__button-radio
+        position: absolute
+        top: -.5rem
+        left: -4.3rem
+        display: inline-block
+        width: 3rem
+        height: 3rem
+        border: .3rem solid #BA8554
+        border-radius: 50%
+        &::after
+            content: ""
+            display: block
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 50%
+            background: #BA8554
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+    &__radio:checked + &__label &__button-radio::after
+        opacity: 1

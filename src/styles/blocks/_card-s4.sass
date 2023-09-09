@@ -1,0 +1,57 @@
+.card-s4
+    width: 105.7rem
+    height: 26.7rem
+    background: rgba(255, 255, 255, 0.80)
+    margin: 0 auto
+    margin-bottom: 8rem
+    clip-path: polygon(11% 0, 100% 0, 89% 100%, 0 100%)
+    padding: 5rem 0 5rem 17rem
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+    &:last-child
+        margin-bottom: 0
+    &:hover &__person-name
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1)
+        filter: blur(.3rem) brightness(45%)
+    &__image-wrapper
+        float: left
+        width: 16.7rem
+        height: 16.7rem
+        border-radius: 50%
+        shape-outside: circle(50% at 50% 50%)
+        margin-right: 5.3rem
+        overflow: hidden
+        position: relative
+    &__img
+        height: 100%
+        transform: scale(1.2)
+        transition: .4s all
+    &__person-name
+        position: absolute
+        top: 50%
+        left: 50%
+        color: #fff
+        transform: translate(-50%, -20%)
+        opacity: 0
+        font-size: 2.4rem
+        font-weight: 400
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        transition: .4s all
+    &__title
+        color: #777
+        font-size: 2rem
+        font-weight: 700
+        letter-spacing: .2rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+    &__text
+        width: 71rem
+        color: #777
+        font-size: 1.6rem
+        font-weight: 400
+        letter-spacing: .2rem
+        line-height: 2rem
