@@ -8,6 +8,17 @@ html(lang="ru")
         link(rel="stylesheet", href="css/style.css")
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     body
+        .navigation
+            input.navigation__toggle#navi-toggle(type="checkbox", name="")
+            label.navigation__button(for="navi-toggle") Menu
+            .navigation__background
+            nav.navigation__nav.nav
+                ul.nav__list
+                    li.nav__item: a.nav__link(href="#") О нас
+                    li.nav__item: a.nav__link(href="#") Скидки
+                    li.nav__item: a.nav__link(href="#") Лучшие туры
+                    li.nav__item: a.nav__link(href="#") Калькулятор цены
+                    li.nav__item: a.nav__link(href="#") Связаться с нами
         .container
             header.header
                 img.logo(src="img/logo.svg", alt="Логотип")
