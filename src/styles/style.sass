@@ -1,5 +1,6 @@
 @import "service/_normalize.scss"
 @import "service/_reset.scss"
+@import mixins/_mixins
 
 $brown-color-light: #BA8554
 $brown-color-darck: #A14F03
@@ -10,6 +11,14 @@ $white: #fff
 
 html
     font-size: 62.5%
+    @include respond(tab-land)
+    font-size: 56.25%
+    @include respond(tab-port)
+    font-size: 50%
+    @include respond(phone)
+    font-size: 30%
+    @include respond(big-screen)
+    font-size: 75%
 
 body
     padding: 5rem
